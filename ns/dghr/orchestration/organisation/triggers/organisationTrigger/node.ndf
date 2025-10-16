@@ -42,7 +42,7 @@
             <value name="messageType">dghr.datamodels:organisation</value>
             <value name="filter"></value>
           </record>
-          <null name="serviceName"/>
+          <value name="serviceName">dghr.orchestration.organisation.flows:uploadOrganisation</value>
           <value name="conditionName">Condition1</value>
         </record>
       </record>
@@ -50,8 +50,8 @@
     <value name="processingSuspended">false</value>
     <value name="retrievalSuspended">false</value>
     <value name="transportAckSize">1</value>
-    <value name="deliverEnabled">false</value>
-    <value name="executeEnabled">false</value>
+    <value name="deliverEnabled">true</value>
+    <value name="executeEnabled">true</value>
     <value name="ordering">0</value>
     <value name="joinTimeout">86400000</value>
     <value name="serialSuspendOnError">false</value>
