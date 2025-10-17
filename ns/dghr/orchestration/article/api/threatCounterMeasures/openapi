@@ -1,0 +1,254 @@
+openapi: 3.0.1
+info:
+  title: Article information
+  description: Article information API to extract information from ATHINA to show
+    in the database
+  contact:
+    name: Misja Heuveling
+  version: "1.0"
+servers:
+- url: /threat
+tags:
+- name: mcm
+  description: Medical Counter Measure
+- name: article
+  description: A product
+paths:
+  /article:
+    summary: 'List medical articles '
+    description: This operation lists medical counter measures
+    get:
+      tags:
+      - mcm
+      - article
+      description: Retrieve a list of medical counter measures
+      operationId: getArticles
+      responses:
+        "200":
+          description: OK - MCM list retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MCMArticleList'
+  /article/{id}:
+    summary: Retrieve the detailed information on an article
+    description: ""
+    get:
+      tags:
+      - mcm
+      - article
+      description: Retrieve the details of a specific medical counter measurement
+      operationId: getArticle
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+        example: 23
+      responses:
+        "200":
+          description: article found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Article'
+              example:
+                id: 42
+                name: Abacavir Arrow
+                activeIngredient:
+                  name: Abacavir
+                  domain: Human use
+                  status: Current
+                  substanceType: Chemical
+                  molecularFormula: C14H18N6O
+                  molecularWeight: 286.33
+                  inchiKey: MCGSCOLBFJQGHM-SCZZXKLOSA-N
+                  evCode: SUB07356MIG
+                  unii: WR2TIP26VS
+                routeOfAdministration: oral
+                authorizationHolder:
+                  id: ORG-10000045885
+                  name: Arrow Generiques
+                  status: ACTIVE
+                  categories:
+                  - Industry
+                  - Pharmaceutical company
+                productionCountry: Malta
+                authorizedCountries:
+                - countryName: Malta
+                  countryCode: MT
+                  availableBeds: 123
+                enquiriesEmailAddress: pharmacovigilance.eu@aurobindo.com
+                enquiriesPhonenumber: +35725867600/+35799577638(24/7)
+  /threats:
+    summary: retrieves all active threats being monitored
+    description: ""
+    get:
+      tags:
+      - mcm
+      description: Get all active threats in Europe
+      operationId: getThreats
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThreatList'
+  /threath/{id}:
+    summary: ""
+    description: ""
+    get:
+      tags:
+      - mcm
+      description: Get a specific threat and its details
+      operationId: getThreat
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+        example: VCS-023
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Threat'
+components:
+  schemas:
+    MCMArticleList:
+      type: object
+      properties:
+        article:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              article:
+                type: string
+              activeIngredient:
+                type: string
+    Article:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        activeIngredient:
+          type: object
+          properties:
+            name:
+              type: string
+            domain:
+              type: string
+            status:
+              type: string
+            substanceType:
+              type: string
+            molecularFormula:
+              type: string
+            molecularWeight:
+              type: number
+            inchiKey:
+              type: string
+            evCode:
+              type: string
+            unii:
+              type: string
+        routeOfAdministration:
+          type: string
+        authorizationHolder:
+          type: object
+          properties:
+            id:
+              type: string
+            name:
+              type: string
+            status:
+              type: string
+              enum:
+              - ACTIVE
+              - INACTIVE
+            categories:
+              type: array
+              items:
+                type: string
+        productionCountry:
+          type: string
+        authorizedCountries:
+          type: array
+          items:
+            type: object
+            properties:
+              countryName:
+                type: string
+              countryCode:
+                type: string
+              availableBeds:
+                type: integer
+        enquiriesEmailAddress:
+          type: string
+        enquiriesPhonenumber:
+          type: string
+    ThreatList:
+      type: object
+      properties:
+        threat:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              label:
+                type: string
+    Threat:
+      type: object
+      properties:
+        id:
+          type: string
+        label:
+          type: string
+        country:
+          type: object
+          properties:
+            code:
+              type: string
+            name:
+              type: string
+        region:
+          type: string
+        city:
+          type: string
+        classification:
+          type: string
+        evidenceType:
+          type: string
+        cases:
+          type: string
+        severity:
+          type: string
+        confidenceScore:
+          type: string
+        latitude:
+          type: string
+        longitude:
+          type: string
+        informationSource:
+          type: object
+          properties:
+            url:
+              type: string
+            organisation:
+              type: string
