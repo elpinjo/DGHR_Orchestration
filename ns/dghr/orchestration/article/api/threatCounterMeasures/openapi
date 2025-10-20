@@ -98,7 +98,19 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ThreatList'
-  /threath/{id}:
+              example:
+                threat:
+                - id: BDC-047
+                  label: Bacteria Dico-47
+                  country: Norway
+                  countryCode: "NO"
+                  numberOfCases: 284
+                - id: VCS-023
+                  label: Virus Castor-23
+                  country: Norway
+                  countryCode: "NO"
+                  numberOfCases: 1195
+  /threat/{id}:
     summary: ""
     description: ""
     get:
@@ -122,6 +134,141 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Threat'
+              example:
+                id: VCS-023
+                label: Virus Castor-23
+                incidents:
+                - country:
+                    code: "NO"
+                    name: Norway
+                  region: Vestland
+                  city: City_Vestland
+                  classification: confirmed
+                  evidenceType: lab_pcr
+                  cases: "29"
+                  severity: medium
+                  confidenceScore: "0.83"
+                  latitude: "659022"
+                  longitude: "51689"
+                - country:
+                    code: "NO"
+                    name: Norway
+                  region: Troms og Finnmark
+                  city: City_Troms
+                  classification: probable
+                  evidenceType: clinician_report
+                  cases: "63"
+                  severity: medium
+                  confidenceScore: "0.85"
+                  latitude: "62431"
+                  longitude: "129288"
+                - country:
+                    code: "NO"
+                    name: Norway
+                  region: Rogaland
+                  city: City_Rogaland
+                  classification: probable
+                  evidenceType: clinician_report
+                  cases: "60"
+                  severity: high
+                  confidenceScore: "0.97"
+                  latitude: "627294"
+                  longitude: "117413"
+  /threat/{id}/counterMeasures:
+    summary: Threat Counter measures
+    description: Counter Measures applicable for a threat
+    get:
+      tags:
+      - mcm
+      description: "This operation will retrieve the counter measures for a threat\
+        \ along with the availability of them. \nIt uses sources like EMA Articles57,\
+        \ a HERA legacy substances database on-premises and Eurostat for beds availability"
+      operationId: getCounterMeasuresForThreat
+      parameters:
+      - name: id
+        in: path
+        description: Identifier of the threat
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+        example: VCS-023
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThreatCounterMeasures'
+              example:
+                threatId: VCS-023
+                threatLabel: Virus Castor-23
+                mcmCode: AVIR-CASTOR
+                atcCode: J05AX00
+                indication: Experimental prophylaxis and supportive treatment for
+                  Virus Castor-23 infection
+                recommendedDose: Topical or oral use under medical supervision (PoC
+                  placeholder)
+                contraIndications: Allergy to castor derivatives
+                evidenceLevel: C
+                validFrom: 17/10/2025
+                sourceSystem: IT_PHT_KB_PoC
+                medicalCounterMeasure:
+                - id: 36983
+                  name: Abführ Sn
+                  productionCountry: Germany
+                  authorizedCountries:
+                  - countryCode: DE
+                    countryName: Germany
+                    availableBeds: 10
+                  enquiriesPhonenumber: +49-40-54 8007-0
+                  routeOfAdministration: Oral Use
+                  activeIngredient:
+                    name: "Castor Oil, Virgin"
+                    inchiKey: ""
+                    substanceType: Specified Substance Group 1
+                    evCode: SUB11796MIG
+                    domain: Human use
+                    molecularFormula: ""
+                    molecularWeight: 0
+                    status: Current
+                    unii: ""
+                  authorizationHolder:
+                    name: Aenova Ip Gmbh
+                    id: ORG-100000089
+                    categories:
+                    - Industry
+                    - Pharmaceutical company
+                    status: ACTIVE
+                  enquiriesEmailAddress: pvtemmler@ebeling-assoc.com
+  /article/{id}/availability:
+    summary: Availability of medical counter measures
+    description: Retrieves the availability of Medical Counter Measures in various
+      locations
+    get:
+      tags:
+      - mcm
+      summary: ""
+      description: retrieves the availability of MCMs in various locations
+      operationId: getAvailabilityOfMCM
+      parameters:
+      - name: id
+        in: path
+        description: Identifier of the MCM
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+        example: "36804"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArticleAvailability'
 components:
   schemas:
     MCMArticleList:
@@ -210,9 +357,15 @@ components:
             type: object
             properties:
               id:
-                type: integer
+                type: string
               label:
                 type: string
+              country:
+                type: string
+              countryCode:
+                type: string
+              numberOfCases:
+                type: integer
     Threat:
       type: object
       properties:
@@ -220,35 +373,103 @@ components:
           type: string
         label:
           type: string
+        incidents:
+          type: array
+          items:
+            type: object
+            properties:
+              country:
+                type: object
+                properties:
+                  code:
+                    type: string
+                  name:
+                    type: string
+              region:
+                type: string
+              city:
+                type: string
+              classification:
+                type: string
+              evidenceType:
+                type: string
+              cases:
+                type: string
+              severity:
+                type: string
+              confidenceScore:
+                type: string
+              latitude:
+                type: string
+              longitude:
+                type: string
+              informationSource:
+                type: object
+                properties:
+                  url:
+                    type: string
+                  organisation:
+                    type: string
+    ArticleAvailability:
+      type: object
+      properties:
         country:
-          type: object
-          properties:
-            code:
-              type: string
-            name:
-              type: string
-        region:
           type: string
-        city:
+        countryCode:
           type: string
-        classification:
+        averageCoverage:
+          type: number
+        facilities:
+          type: array
+          items:
+            type: object
+            properties:
+              mcmLabel:
+                type: string
+              facilityId:
+                type: string
+              facilityName:
+                type: string
+              stockOnHand:
+                type: integer
+              weeklyThroughputCapacity:
+                type: integer
+              averageWeeklyDemand:
+                type: integer
+              populationTarget:
+                type: integer
+              coveragePercentage:
+                type: number
+              reorderPoint:
+                type: integer
+              provenanceBatch:
+                type: string
+        sourceSystem:
           type: string
-        evidenceType:
+    ThreatCounterMeasures:
+      type: object
+      properties:
+        threatId:
           type: string
-        cases:
+        threatLabel:
           type: string
-        severity:
+        mcmCode:
           type: string
-        confidenceScore:
+        atcCode:
           type: string
-        latitude:
+        indication:
           type: string
-        longitude:
+        recommendedDose:
           type: string
-        informationSource:
-          type: object
-          properties:
-            url:
-              type: string
-            organisation:
-              type: string
+        contraIndications:
+          type: string
+        evidenceLevel:
+          type: string
+        validFrom:
+          type: string
+        sourceSystem:
+          type: string
+        medicalCounterMeasure:
+          type: array
+          items:
+            $ref: '#/components/schemas/Article'

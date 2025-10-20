@@ -29,8 +29,6 @@
         </record>
       </array>
       <value name="nillable">true</value>
-      <Boolean name="readOnly">false</Boolean>
-      <Boolean name="writeOnly">false</Boolean>
       <array name="rec_fields" type="record" depth="1">
         <record javaclass="com.wm.util.Values">
           <value name="node_type">record</value>
@@ -86,8 +84,6 @@
                     </record>
                   </array>
                   <value name="nillable">false</value>
-                  <Boolean name="readOnly">false</Boolean>
-                  <Boolean name="writeOnly">false</Boolean>
                 </record>
               </array>
               <value name="modifiable">true</value>
@@ -122,8 +118,6 @@
         </record>
       </array>
       <value name="nillable">true</value>
-      <Boolean name="readOnly">false</Boolean>
-      <Boolean name="writeOnly">false</Boolean>
       <array name="rec_fields" type="record" depth="1">
         <record javaclass="com.wm.util.Values">
           <value name="node_type">record</value>
@@ -140,7 +134,7 @@
               <value name="node_subtype">unknown</value>
               <value name="node_comment">application/json</value>
               <value name="is_public">false</value>
-              <value name="field_name">Threat</value>
+              <value name="field_name">ThreatCounterMeasures</value>
               <value name="field_type">recref</value>
               <value name="field_is_jsonSchema">true</value>
               <value name="field_dim">0</value>
@@ -167,10 +161,8 @@
                 </record>
               </array>
               <value name="nillable">true</value>
-              <Boolean name="readOnly">false</Boolean>
-              <Boolean name="writeOnly">false</Boolean>
               <value name="modifiable">true</value>
-              <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:Threat</value>
+              <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ThreatCounterMeasures</value>
             </record>
           </array>
           <value name="modifiable">true</value>
@@ -179,7 +171,8 @@
       <value name="modifiable">true</value>
     </record>
   </record>
-  <value name="node_comment">Get a specific threat and its details</value>
+  <value name="node_comment">This operation will retrieve the counter measures for a threat along with the availability of them. 
+It uses sources like EMA Articles57, a HERA legacy substances database on-premises and Eurostat for beds availability</value>
   <value name="stateless">yes</value>
   <value name="caching">no</value>
   <value name="prefetch">no</value>
