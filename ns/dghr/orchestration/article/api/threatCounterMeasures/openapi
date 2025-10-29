@@ -23,6 +23,7 @@ paths:
       - article
       description: Retrieve a list of medical counter measures
       operationId: getArticles
+      parameters: []
       responses:
         "200":
           description: OK - MCM list retrieved
@@ -269,6 +270,35 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ArticleAvailability'
+  /article/find/{activeIngredient}:
+    summary: Find article active Ingredient
+    description: ""
+    get:
+      tags:
+      - mcm
+      summary: Find an article based on active ingredient
+      operationId: findArticleByActiveIngredient
+      parameters:
+      - name: activeIngredient
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+        example: "Castor Oil, Virgin"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  article:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Article'
 components:
   schemas:
     MCMArticleList:
@@ -343,7 +373,7 @@ components:
               countryCode:
                 type: string
               availableBeds:
-                type: integer
+                type: number
         enquiriesEmailAddress:
           type: string
         enquiriesPhonenumber:
@@ -411,65 +441,71 @@ components:
                   organisation:
                     type: string
     ArticleAvailability:
-      type: object
-      properties:
-        country:
-          type: string
-        countryCode:
-          type: string
-        averageCoverage:
-          type: number
-        facilities:
-          type: array
-          items:
-            type: object
-            properties:
-              mcmLabel:
-                type: string
-              facilityId:
-                type: string
-              facilityName:
-                type: string
-              stockOnHand:
-                type: integer
-              weeklyThroughputCapacity:
-                type: integer
-              averageWeeklyDemand:
-                type: integer
-              populationTarget:
-                type: integer
-              coveragePercentage:
-                type: number
-              reorderPoint:
-                type: integer
-              provenanceBatch:
-                type: string
-        sourceSystem:
-          type: string
+      type: array
+      items:
+        type: object
+        properties:
+          country:
+            type: string
+          countryCode:
+            type: string
+          averageCoverage:
+            type: number
+          mcmLabel:
+            type: string
+          facilities:
+            type: array
+            items:
+              type: object
+              properties:
+                facilityId:
+                  type: string
+                facilityName:
+                  type: string
+                stockOnHand:
+                  type: integer
+                weeklyThroughputCapacity:
+                  type: integer
+                averageWeeklyDemand:
+                  type: integer
+                populationTarget:
+                  type: integer
+                mcmLabel:
+                  type: string
+                coveragePercentage:
+                  type: number
+                reorderPoint:
+                  type: integer
+                provenanceBatch:
+                  type: string
+          sourceSystem:
+            type: string
     ThreatCounterMeasures:
-      type: object
-      properties:
-        threatId:
-          type: string
-        threatLabel:
-          type: string
-        mcmCode:
-          type: string
-        atcCode:
-          type: string
-        indication:
-          type: string
-        recommendedDose:
-          type: string
-        contraIndications:
-          type: string
-        evidenceLevel:
-          type: string
-        validFrom:
-          type: string
-        sourceSystem:
-          type: string
-        medicalCounterMeasure:
-          type: array
-          items:
-            $ref: '#/components/schemas/Article'
+      type: array
+      items:
+        type: object
+        properties:
+          threatId:
+            type: string
+          threatLabel:
+            type: string
+          mcmCode:
+            type: string
+          atcCode:
+            type: string
+          indication:
+            type: string
+          recommendedDose:
+            type: string
+          contraIndications:
+            type: string
+          evidenceLevel:
+            type: string
+          validFrom:
+            type: string
+          sourceSystem:
+            type: string
+          medicalCounterMeasure:
+            type: array
+            items:
+              $ref: '#/components/schemas/Article'

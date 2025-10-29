@@ -71,17 +71,11 @@
       <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
-        <value name="node_comment"></value>
-        <record name="node_hints" javaclass="com.wm.util.Values">
-          <value name="field_largerEditor">false</value>
-          <value name="field_password">false</value>
-        </record>
         <value name="is_public">false</value>
         <value name="field_name">params</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="field_opt">true</value>
-        <value name="wrapper_type">IData</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
@@ -128,8 +122,6 @@
                   </record>
                 </array>
                 <value name="nillable">false</value>
-                <Boolean name="readOnly">false</Boolean>
-                <Boolean name="writeOnly">false</Boolean>
               </record>
             </array>
             <value name="modifiable">true</value>
@@ -274,17 +266,11 @@
       <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
-        <value name="node_comment"></value>
-        <record name="node_hints" javaclass="com.wm.util.Values">
-          <value name="field_largerEditor">false</value>
-          <value name="field_password">false</value>
-        </record>
         <value name="is_public">false</value>
         <value name="field_name">params</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="field_opt">true</value>
-        <value name="wrapper_type">IData</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
@@ -428,17 +414,11 @@
       <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
-        <value name="node_comment"></value>
-        <record name="node_hints" javaclass="com.wm.util.Values">
-          <value name="field_largerEditor">false</value>
-          <value name="field_password">false</value>
-        </record>
         <value name="is_public">false</value>
         <value name="field_name">params</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="field_opt">true</value>
-        <value name="wrapper_type">IData</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
@@ -585,9 +565,132 @@
 
 <MAP TIMEOUT="" MODE="STANDALONE">
   <COMMENT>Initialize output</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">documents</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="is_soap_array_encoding_used">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">articleAvailability</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">groupCriteria</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="is_soap_array_encoding_used">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">inventoryPerCountry</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="is_soap_array_encoding_used">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">documentGroups</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="is_soap_array_encoding_used">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <array name="_untitled" type="record" depth="1">
+    </array>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
 </MAP>
 
-<LOOP TIMEOUT="" IN-ARRAY="/inventoryPerCountry">
+<LOOP TIMEOUT="" IN-ARRAY="/inventoryPerCountry" OUT-ARRAY="/articleAvailability/_untitled">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
@@ -648,6 +751,19 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">articleAvailability</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">groupCriteria</value>
         <value name="field_type">record</value>
         <value name="field_dim">1</value>
@@ -672,19 +788,6 @@
         <array name="rec_fields" type="record" depth="1">
         </array>
         <value name="modifiable">true</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">articleAvailability</value>
-        <value name="field_type">recref</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <value name="modifiable">true</value>
-        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
@@ -733,6 +836,19 @@
         <array name="rec_fields" type="record" depth="1">
         </array>
         <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">articleAvailability</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
@@ -933,7 +1049,7 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/countrycodes;2;1/name_long;1;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/country;1;0">
+<MAPCOPY FROM="/countrycodes;2;1/name_long;1;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/_untitled;2;0/country;1;0">
 </MAPCOPY>
 </MAP>
 </MAPINVOKE>
@@ -966,12 +1082,6 @@
 </DATA>
 </MAPSET>
 
-<MAPCOPY FROM="/inventoryPerCountry;2;0/documents[0];4;1;dghr.files.datamodels:inventory/country_iso;1;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/countryCode;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/inventoryPerCountry;2;0/documents[0];4;1;dghr.files.datamodels:inventory/source_system;1;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/sourceSystem;1;0">
-</MAPCOPY>
-
 <MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CoverageTotal;1;0">
   <DATA ENCODING="XMLValues" I18N="true">
 
@@ -991,9 +1101,18 @@
 </Values>
 </DATA>
 </MAPSET>
+
+<MAPCOPY FROM="/inventoryPerCountry;2;0/documents;4;1;dghr.files.datamodels:inventory/country_iso;1;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/_untitled;2;0/countryCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/inventoryPerCountry;2;0/documents;4;1;dghr.files.datamodels:inventory/source_system;1;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/_untitled;2;0/sourceSystem;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/inventoryPerCountry;2;0/documents;4;1;dghr.files.datamodels:inventory/mcm_label;1;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/_untitled;2;0/mcmLabel;1;0">
+</MAPCOPY>
 </MAP>
 
-<LOOP TIMEOUT="" IN-ARRAY="/inventoryPerCountry/documents" OUT-ARRAY="/articleAvailability/facilities">
+<LOOP TIMEOUT="" IN-ARRAY="/inventoryPerCountry/documents" OUT-ARRAY="/articleAvailability/_untitled/facilities">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
@@ -1054,6 +1173,19 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">articleAvailability</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">groupCriteria</value>
         <value name="field_type">record</value>
         <value name="field_dim">1</value>
@@ -1078,19 +1210,6 @@
         <array name="rec_fields" type="record" depth="1">
         </array>
         <value name="modifiable">true</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">articleAvailability</value>
-        <value name="field_type">recref</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <value name="modifiable">true</value>
-        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
@@ -1166,6 +1285,19 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">articleAvailability</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">groupCriteria</value>
         <value name="field_type">record</value>
         <value name="field_dim">1</value>
@@ -1203,19 +1335,6 @@
           </record>
         </array>
         <value name="modifiable">true</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">articleAvailability</value>
-        <value name="field_type">recref</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <value name="modifiable">true</value>
-        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
@@ -1337,15 +1456,6 @@
 </MAP>
 </MAPINVOKE>
 
-<MAPCOPY FROM="/inventoryPerCountry;2;0/documents;4;0;dghr.files.datamodels:inventory/mcm_label;1;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/facilities;2;0/mcmLabel;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/inventoryPerCountry;2;0/documents;4;0;dghr.files.datamodels:inventory/facility_id;1;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/facilities;2;0/facilityId;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/inventoryPerCountry;2;0/documents;4;0;dghr.files.datamodels:inventory/facility_name;1;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/facilities;2;0/facilityName;1;0">
-</MAPCOPY>
-
 <MAPINVOKE SERVICE="pub.math:toNumber" VALIDATE-IN="$none" VALIDATE-OUT="$none" INVOKE-ORDER="0">
 
   <!-- nodes -->
@@ -1391,7 +1501,7 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/num;3;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/facilities;2;0/stockOnHand;3.12;0">
+<MAPCOPY FROM="/num;3;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/_untitled;2;0/facilities;2;0/stockOnHand;3.12;0">
 </MAPCOPY>
 </MAP>
 </MAPINVOKE>
@@ -1441,7 +1551,7 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/num;3;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/facilities;2;0/weeklyThroughputCapacity;3.12;0">
+<MAPCOPY FROM="/num;3;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/_untitled;2;0/facilities;2;0/weeklyThroughputCapacity;3.12;0">
 </MAPCOPY>
 </MAP>
 </MAPINVOKE>
@@ -1491,7 +1601,7 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/num;3;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/facilities;2;0/averageWeeklyDemand;3.12;0">
+<MAPCOPY FROM="/num;3;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/_untitled;2;0/facilities;2;0/averageWeeklyDemand;3.12;0">
 </MAPCOPY>
 </MAP>
 </MAPINVOKE>
@@ -1541,7 +1651,7 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/num;3;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/facilities;2;0/populationTarget;3.12;0">
+<MAPCOPY FROM="/num;3;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/_untitled;2;0/facilities;2;0/populationTarget;3.12;0">
 </MAPCOPY>
 </MAP>
 </MAPINVOKE>
@@ -1591,7 +1701,7 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/num;3;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/facilities;2;0/coveragePercentage;3.11;0">
+<MAPCOPY FROM="/num;3;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/_untitled;2;0/facilities;2;0/coveragePercentage;3.11;0">
 </MAPCOPY>
 </MAP>
 </MAPINVOKE>
@@ -1641,17 +1751,22 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/num;3;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/facilities;2;0/reorderPoint;3.12;0">
+<MAPCOPY FROM="/num;3;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/_untitled;2;0/facilities;2;0/reorderPoint;3.12;0">
 </MAPCOPY>
 </MAP>
 </MAPINVOKE>
 
-<MAPCOPY FROM="/inventoryPerCountry;2;0/documents;4;0;dghr.files.datamodels:inventory/provenance_batch_id;1;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/facilities;2;0/provenanceBatch;1;0">
+<MAPCOPY FROM="/inventoryPerCountry;2;0/documents;4;0;dghr.files.datamodels:inventory/provenance_batch_id;1;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/_untitled;2;0/facilities;2;0/provenanceBatch;1;0">
 </MAPCOPY>
-</MAP>
 
-<MAP TIMEOUT="" MODE="STANDALONE">
-  <COMMENT></COMMENT>
+<MAPCOPY FROM="/inventoryPerCountry;2;0/documents;4;0;dghr.files.datamodels:inventory/facility_id;1;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/_untitled;2;0/facilities;2;0/facilityId;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/inventoryPerCountry;2;0/documents;4;0;dghr.files.datamodels:inventory/mcm_label;1;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/_untitled;2;0/facilities;2;0/mcmLabel;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/inventoryPerCountry;2;0/documents;4;0;dghr.files.datamodels:inventory/facility_name;1;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/_untitled;2;0/facilities;2;0/facilityName;1;0">
+</MAPCOPY>
 </MAP>
 </LOOP>
 
@@ -1768,6 +1883,19 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">articleAvailability</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">groupCriteria</value>
         <value name="field_type">record</value>
         <value name="field_dim">1</value>
@@ -1792,19 +1920,6 @@
         <array name="rec_fields" type="record" depth="1">
         </array>
         <value name="modifiable">true</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">articleAvailability</value>
-        <value name="field_type">recref</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <value name="modifiable">true</value>
-        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
@@ -1956,16 +2071,14 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">groupCriteria</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">1</value>
+        <value name="field_name">articleAvailability</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
-        <value name="is_soap_array_encoding_used">false</value>
-        <array name="rec_fields" type="record" depth="1">
-        </array>
         <value name="modifiable">true</value>
+        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
@@ -1982,6 +2095,21 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">groupCriteria</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="is_soap_array_encoding_used">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">inventoryPerCountry</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
@@ -1991,19 +2119,6 @@
         <array name="rec_fields" type="record" depth="1">
         </array>
         <value name="modifiable">true</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">articleAvailability</value>
-        <value name="field_type">recref</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <value name="modifiable">true</value>
-        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
@@ -2166,16 +2281,14 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">groupCriteria</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">1</value>
+        <value name="field_name">articleAvailability</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
-        <value name="is_soap_array_encoding_used">false</value>
-        <array name="rec_fields" type="record" depth="1">
-        </array>
         <value name="modifiable">true</value>
+        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
@@ -2192,6 +2305,21 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">groupCriteria</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="is_soap_array_encoding_used">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">inventoryPerCountry</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
@@ -2201,19 +2329,6 @@
         <array name="rec_fields" type="record" depth="1">
         </array>
         <value name="modifiable">true</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">articleAvailability</value>
-        <value name="field_type">recref</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <value name="modifiable">true</value>
-        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
@@ -2322,16 +2437,14 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">groupCriteria</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">1</value>
+        <value name="field_name">articleAvailability</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
-        <value name="is_soap_array_encoding_used">false</value>
-        <array name="rec_fields" type="record" depth="1">
-        </array>
         <value name="modifiable">true</value>
+        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
@@ -2348,6 +2461,21 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">groupCriteria</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="is_soap_array_encoding_used">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">inventoryPerCountry</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
@@ -2357,19 +2485,6 @@
         <array name="rec_fields" type="record" depth="1">
         </array>
         <value name="modifiable">true</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">articleAvailability</value>
-        <value name="field_type">recref</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <value name="modifiable">true</value>
-        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
@@ -2450,13 +2565,13 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/num;3;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/averageCoverage;3.11;0">
+<MAPCOPY FROM="/num;3;0" TO="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/_untitled;2;0/averageCoverage;3.11;0">
 </MAPCOPY>
 </MAP>
 </MAPINVOKE>
 </MAP>
 
-<INVOKE TIMEOUT="" SERVICE="pub.list:appendToDocumentList" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+<INVOKE TIMEOUT="" SERVICE="pub.list:appendToDocumentList" VALIDATE-IN="$none" VALIDATE-OUT="$none" DISABLED="true">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
@@ -2615,16 +2730,14 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">groupCriteria</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">1</value>
+        <value name="field_name">articleAvailability</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
-        <value name="is_soap_array_encoding_used">false</value>
-        <array name="rec_fields" type="record" depth="1">
-        </array>
         <value name="modifiable">true</value>
+        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
@@ -2641,12 +2754,13 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">inventoryPerCountry</value>
+        <value name="field_name">groupCriteria</value>
         <value name="field_type">record</value>
-        <value name="field_dim">0</value>
+        <value name="field_dim">1</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
+        <value name="is_soap_array_encoding_used">false</value>
         <array name="rec_fields" type="record" depth="1">
         </array>
         <value name="modifiable">true</value>
@@ -2683,14 +2797,15 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">articleAvailability</value>
-        <value name="field_type">recref</value>
+        <value name="field_name">inventoryPerCountry</value>
+        <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
         <value name="modifiable">true</value>
-        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
@@ -2850,16 +2965,14 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">groupCriteria</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">1</value>
+        <value name="field_name">articleAvailability</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
-        <value name="is_soap_array_encoding_used">false</value>
-        <array name="rec_fields" type="record" depth="1">
-        </array>
         <value name="modifiable">true</value>
+        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
@@ -2876,12 +2989,13 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">inventoryPerCountry</value>
+        <value name="field_name">groupCriteria</value>
         <value name="field_type">record</value>
-        <value name="field_dim">0</value>
+        <value name="field_dim">1</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
+        <value name="is_soap_array_encoding_used">false</value>
         <array name="rec_fields" type="record" depth="1">
         </array>
         <value name="modifiable">true</value>
@@ -2918,14 +3032,15 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">articleAvailability</value>
-        <value name="field_type">recref</value>
+        <value name="field_name">inventoryPerCountry</value>
+        <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
         <value name="modifiable">true</value>
-        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
@@ -3008,6 +3123,232 @@
     <value name="form_qualified">false</value>
     <value name="is_global">false</value>
     <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">200</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">ArticleAvailability</value>
+            <value name="field_type">record</value>
+            <value name="field_dim">1</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <value name="is_soap_array_encoding_used">false</value>
+            <array name="rec_fields" type="record" depth="1">
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">field</value>
+                <value name="node_subtype">unknown</value>
+                <value name="is_public">false</value>
+                <value name="field_name">country</value>
+                <value name="field_type">string</value>
+                <value name="field_is_jsonSchema">true</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+                <array name="field_content_type" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <record name="type" javaclass="com.wm.util.Values">
+                      <value name="key">type</value>
+                      <value name="value">string</value>
+                      <value name="type">STRING</value>
+                    </record>
+                    <record name="extendedProperties" javaclass="com.wm.util.Values">
+                      <record name="extensionName" javaclass="com.wm.util.Values">
+                        <value name="key">extensionName</value>
+                        <value name="value">openapi</value>
+                        <value name="type">STRING</value>
+                      </record>
+                      <record name="extensionVersion" javaclass="com.wm.util.Values">
+                        <value name="key">extensionVersion</value>
+                        <value name="value">3.0.2</value>
+                        <value name="type">STRING</value>
+                      </record>
+                    </record>
+                  </record>
+                </array>
+                <value name="nillable">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">field</value>
+                <value name="node_subtype">unknown</value>
+                <value name="is_public">false</value>
+                <value name="field_name">countryCode</value>
+                <value name="field_type">string</value>
+                <value name="field_is_jsonSchema">true</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+                <array name="field_content_type" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <record name="type" javaclass="com.wm.util.Values">
+                      <value name="key">type</value>
+                      <value name="value">string</value>
+                      <value name="type">STRING</value>
+                    </record>
+                    <record name="extendedProperties" javaclass="com.wm.util.Values">
+                      <record name="extensionName" javaclass="com.wm.util.Values">
+                        <value name="key">extensionName</value>
+                        <value name="value">openapi</value>
+                        <value name="type">STRING</value>
+                      </record>
+                      <record name="extensionVersion" javaclass="com.wm.util.Values">
+                        <value name="key">extensionVersion</value>
+                        <value name="value">3.0.2</value>
+                        <value name="type">STRING</value>
+                      </record>
+                    </record>
+                  </record>
+                </array>
+                <value name="nillable">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">field</value>
+                <value name="node_subtype">unknown</value>
+                <value name="is_public">false</value>
+                <value name="field_name">averageCoverage</value>
+                <value name="field_type">object</value>
+                <value name="field_is_jsonSchema">true</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+                <value name="wrapper_type">java.math.BigDecimal</value>
+                <array name="field_content_type" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <record name="type" javaclass="com.wm.util.Values">
+                      <value name="key">type</value>
+                      <value name="value">number</value>
+                      <value name="type">STRING</value>
+                    </record>
+                    <record name="extendedProperties" javaclass="com.wm.util.Values">
+                      <record name="extensionName" javaclass="com.wm.util.Values">
+                        <value name="key">extensionName</value>
+                        <value name="value">openapi</value>
+                        <value name="type">STRING</value>
+                      </record>
+                      <record name="extensionVersion" javaclass="com.wm.util.Values">
+                        <value name="key">extensionVersion</value>
+                        <value name="value">3.0.2</value>
+                        <value name="type">STRING</value>
+                      </record>
+                    </record>
+                  </record>
+                </array>
+                <value name="nillable">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">field</value>
+                <value name="node_subtype">unknown</value>
+                <value name="is_public">false</value>
+                <value name="field_name">mcmLabel</value>
+                <value name="field_type">string</value>
+                <value name="field_is_jsonSchema">true</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+                <array name="field_content_type" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <record name="type" javaclass="com.wm.util.Values">
+                      <value name="key">type</value>
+                      <value name="value">string</value>
+                      <value name="type">STRING</value>
+                    </record>
+                    <record name="extendedProperties" javaclass="com.wm.util.Values">
+                      <record name="extensionName" javaclass="com.wm.util.Values">
+                        <value name="key">extensionName</value>
+                        <value name="value">openapi</value>
+                        <value name="type">STRING</value>
+                      </record>
+                      <record name="extensionVersion" javaclass="com.wm.util.Values">
+                        <value name="key">extensionVersion</value>
+                        <value name="value">3.0.2</value>
+                        <value name="type">STRING</value>
+                      </record>
+                    </record>
+                  </record>
+                </array>
+                <value name="nillable">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">record</value>
+                <value name="node_subtype">unknown</value>
+                <value name="is_public">false</value>
+                <value name="field_name">facilities</value>
+                <value name="field_type">record</value>
+                <value name="field_is_jsonSchema">true</value>
+                <value name="field_dim">1</value>
+                <value name="field_opt">true</value>
+                <array name="field_content_type" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <record name="type" javaclass="com.wm.util.Values">
+                      <value name="key">type</value>
+                      <value name="value">object</value>
+                      <value name="type">STRING</value>
+                    </record>
+                    <record name="extendedProperties" javaclass="com.wm.util.Values">
+                      <record name="extensionName" javaclass="com.wm.util.Values">
+                        <value name="key">extensionName</value>
+                        <value name="value">openapi</value>
+                        <value name="type">STRING</value>
+                      </record>
+                      <record name="extensionVersion" javaclass="com.wm.util.Values">
+                        <value name="key">extensionVersion</value>
+                        <value name="value">3.0.2</value>
+                        <value name="type">STRING</value>
+                      </record>
+                    </record>
+                  </record>
+                </array>
+                <value name="nillable">false</value>
+                <value name="is_soap_array_encoding_used">false</value>
+                <array name="rec_fields" type="record" depth="1">
+                </array>
+                <value name="modifiable">true</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">field</value>
+                <value name="node_subtype">unknown</value>
+                <value name="is_public">false</value>
+                <value name="field_name">sourceSystem</value>
+                <value name="field_type">string</value>
+                <value name="field_is_jsonSchema">true</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+                <array name="field_content_type" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <record name="type" javaclass="com.wm.util.Values">
+                      <value name="key">type</value>
+                      <value name="value">string</value>
+                      <value name="type">STRING</value>
+                    </record>
+                    <record name="extendedProperties" javaclass="com.wm.util.Values">
+                      <record name="extensionName" javaclass="com.wm.util.Values">
+                        <value name="key">extensionName</value>
+                        <value name="value">openapi</value>
+                        <value name="type">STRING</value>
+                      </record>
+                      <record name="extensionVersion" javaclass="com.wm.util.Values">
+                        <value name="key">extensionVersion</value>
+                        <value name="value">3.0.2</value>
+                        <value name="type">STRING</value>
+                      </record>
+                    </record>
+                  </record>
+                </array>
+                <value name="nillable">false</value>
+              </record>
+            </array>
+            <value name="modifiable">true</value>
+          </record>
+        </array>
+        <value name="modifiable">true</value>
+      </record>
     </array>
     <value name="modifiable">true</value>
   </record>
@@ -3114,6 +3455,30 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">articleAvailability</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">averageCoverage</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">groupCriteria</value>
         <value name="field_type">record</value>
         <value name="field_dim">1</value>
@@ -3148,17 +3513,6 @@
         <value name="modifiable">true</value>
       </record>
       <record javaclass="com.wm.util.Values">
-        <value name="node_type">unknown</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">averageCoverage</value>
-        <value name="field_type">string</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
@@ -3186,33 +3540,6 @@
           </record>
         </array>
         <value name="modifiable">true</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">200</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <array name="rec_fields" type="record" depth="1">
-        </array>
-        <value name="modifiable">true</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">articleAvailability</value>
-        <value name="field_type">recref</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <value name="modifiable">true</value>
-        <value name="rec_ref">dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
@@ -3301,5 +3628,8 @@
 
 <MAPDELETE FIELD="/num1;1;0">
 </MAPDELETE>
+
+<MAPCOPY FROM="/articleAvailability;4;0;dghr.orchestration.article.api.threatCounterMeasures_.docTypes:ArticleAvailability/_untitled;2;1" TO="/200;2;0/ArticleAvailability;2;1">
+</MAPCOPY>
 </MAP>
 </FLOW>

@@ -895,7 +895,7 @@
               <record javaclass="com.wm.util.Values">
                 <record name="type" javaclass="com.wm.util.Values">
                   <value name="key">type</value>
-                  <value name="value">integer</value>
+                  <value name="value">number</value>
                   <value name="type">STRING</value>
                 </record>
                 <record name="extendedProperties" javaclass="com.wm.util.Values">
@@ -913,7 +913,7 @@
               </record>
             </array>
             <value name="nillable">false</value>
-            <value name="wrapper_type">java.math.BigInteger</value>
+            <value name="wrapper_type">java.math.BigDecimal</value>
           </record>
         </array>
         <null name="rec_closed"/>
