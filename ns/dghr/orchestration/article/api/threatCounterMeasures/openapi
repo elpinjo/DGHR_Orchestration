@@ -491,6 +491,8 @@ components:
             type: string
           mcmCode:
             type: string
+          mcmLabel:
+            type: string
           atcCode:
             type: string
           indication:
