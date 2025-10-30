@@ -396,6 +396,10 @@ components:
                 type: string
               countryCode:
                 type: string
+              labelLatitude:
+                type: number
+              labelLongitude:
+                type: number
               numberOfCases:
                 type: integer
               availableBeds:
@@ -418,6 +422,10 @@ components:
                   code:
                     type: string
                   name:
+                    type: string
+                  labelLatitude:
+                    type: string
+                  labelLongitude:
                     type: string
               region:
                 type: string
