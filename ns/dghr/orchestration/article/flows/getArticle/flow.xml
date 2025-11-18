@@ -1304,7 +1304,7 @@
 </SEQUENCE>
 </LOOP>
 
-<INVOKE TIMEOUT="" SERVICE="dghr.services:requestSubstanceService" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+<INVOKE TIMEOUT="" SERVICE="dghr.hybrid.services:requestSubstanceService" VALIDATE-IN="$none" VALIDATE-OUT="$none">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
